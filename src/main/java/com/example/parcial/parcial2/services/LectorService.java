@@ -32,6 +32,10 @@ public class LectorService {
                 .orElseThrow(() -> new RuntimeException("Lector not found"));
     }
 
+    public List<Lector> getLectors() {
+        return lectorRepository.findAll();
+    }
+
     public Lector updateLector(UUID id, LectorRequestDto dto) {
         Lector lector = lectorRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Lector not found"));

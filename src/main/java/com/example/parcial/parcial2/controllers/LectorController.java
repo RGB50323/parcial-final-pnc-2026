@@ -30,6 +30,11 @@ public class LectorController {
         return ResponseEntity.ok(lectorService.getLectorById(id));
     }
 
+    @GetMapping
+    public ResponseEntity<List<Lector>> getLectors() {
+        return ResponseEntity.ok(lectorService.getLectors());
+    }
+
     @PutMapping("/{id}")
     public ResponseEntity<Lector> updateLector(@PathVariable UUID id, @Valid @RequestBody LectorRequestDto dto) {
         return ResponseEntity.ok(lectorService.updateLector(id, dto));

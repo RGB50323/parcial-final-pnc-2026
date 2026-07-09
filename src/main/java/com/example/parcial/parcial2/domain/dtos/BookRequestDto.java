@@ -1,5 +1,6 @@
 package com.example.parcial.parcial2.domain.dtos;
 
+import com.example.parcial.parcial2.domain.entities.Genre;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import lombok.Getter;
@@ -17,7 +18,7 @@ public class BookRequestDto {
     @NotBlank
     private String author;
 
-    private String genre;
+    private Genre genre;
 
     @NotBlank
     private String isbn;

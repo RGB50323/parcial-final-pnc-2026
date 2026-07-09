@@ -1,5 +1,6 @@
 package com.example.parcial.parcial2.domain.dtos;
 
+import com.example.parcial.parcial2.domain.entities.Genre;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -10,6 +11,6 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 public class GenreCountDto {
-    private String genre;
+    private Genre genre;
     private long count;
 }

@@ -4,6 +4,7 @@ import com.example.parcial.parcial2.domain.dtos.MovementRequestDto;
 import com.example.parcial.parcial2.domain.entities.Movement;
 import com.example.parcial.parcial2.services.MovementService;
 import jakarta.validation.Valid;
+import org.apache.coyote.BadRequestException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,12 +19,12 @@ public class MovementController {
     }
 
     @PostMapping("/borrow")
-    public ResponseEntity<Movement> borrowBook(@Valid @RequestBody MovementRequestDto dto) {
+    public ResponseEntity<Movement> borrowBook(@Valid @RequestBody MovementRequestDto dto) throws BadRequestException {
         return ResponseEntity.ok(movementService.borrowBook(dto));
     }
 
     @PostMapping("/return")
-    public ResponseEntity<Movement> returnBook(@Valid @RequestBody MovementRequestDto dto) {
+    public ResponseEntity<Movement> returnBook(@Valid @RequestBody MovementRequestDto dto) throws BadRequestException {
         return ResponseEntity.ok(movementService.returnBook(dto));
     }
 }

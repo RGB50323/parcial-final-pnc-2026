@@ -3,6 +3,7 @@ package com.example.parcial.parcial2.controllers;
 import com.example.parcial.parcial2.domain.dtos.BookRequestDto;
 import com.example.parcial.parcial2.domain.dtos.GenreCountDto;
 import com.example.parcial.parcial2.domain.entities.Book;
+import com.example.parcial.parcial2.domain.entities.Genre;
 import com.example.parcial.parcial2.services.BookService;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
@@ -39,7 +40,7 @@ public class BookController {
     @GetMapping
     public ResponseEntity<List<Book>> getAllBooks(
             @RequestParam(required = false) String author,
-            @RequestParam(required = false) String genre) {
+            @RequestParam(required = false) Genre genre) {
         return ResponseEntity.ok(bookService.getAllBooks(author, genre));
     }
 
