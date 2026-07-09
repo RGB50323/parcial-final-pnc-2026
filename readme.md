@@ -1,4 +1,4 @@
-# [Nombre] [Carné]
+# Rafael Gutiérrez del Barrio 00073123
 
 ## Indicaciones
 
